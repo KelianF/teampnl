@@ -2,6 +2,7 @@
 
 # Create your views here.
 from django.shortcuts import render
+import plotly
 from plotly.offline import plot
 import plotly.graph_objects as go
 
