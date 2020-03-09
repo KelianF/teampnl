@@ -3,7 +3,6 @@
 # Create your views here.
 from django.shortcuts import render
 from plotly.offline import plot
-from plotly.graph_objs import Scatter
 import plotly.graph_objects as go
 
 import pandas as pd
@@ -17,6 +16,8 @@ def data(request):
     df.index = pd.to_datetime(df.index.astype(str))
     
     fig = go.Figure()
+    
+    
 
     fig.add_trace(go.Scatter(x=[x for x in df.index], 
                         y=df.iloc[:,0],
